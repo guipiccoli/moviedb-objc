@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "APIService.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    APIService* service = [[APIService alloc] init];
+//    [service getPopularMovies:<#(id)#> :<#^(NSData *data, NSURLResponse *response, NSError *error)completionHandler#>]
 }
 
 

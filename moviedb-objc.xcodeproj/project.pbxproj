@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D270EA32420072200447700 /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D270EA22420072200447700 /* APIService.m */; };
 		E7D1FE7A241FF43C00B2E994 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D1FE79241FF43C00B2E994 /* AppDelegate.m */; };
 		E7D1FE7D241FF43C00B2E994 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D1FE7C241FF43C00B2E994 /* SceneDelegate.m */; };
 		E7D1FE80241FF43C00B2E994 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D1FE7F241FF43C00B2E994 /* ViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D270EA22420072200447700 /* APIService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIService.m; sourceTree = "<group>"; };
+		6D57FDD9242025BD00183A24 /* APIService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIService.h; sourceTree = "<group>"; };
 		E7D1FE75241FF43C00B2E994 /* moviedb-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "moviedb-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D1FE78241FF43C00B2E994 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7D1FE79241FF43C00B2E994 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				E7D1FE86241FF43E00B2E994 /* LaunchScreen.storyboard */,
 				E7D1FE89241FF43E00B2E994 /* Info.plist */,
 				E7D1FE8A241FF43E00B2E994 /* main.m */,
+				6D270EA22420072200447700 /* APIService.m */,
+				6D57FDD9242025BD00183A24 /* APIService.h */,
 			);
 			path = "moviedb-objc";
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				TargetAttributes = {
 					E7D1FE74241FF43C00B2E994 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1130;
 					};
 					E7D1FE8F241FF43E00B2E994 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -268,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D1FE80241FF43C00B2E994 /* ViewController.m in Sources */,
+				6D270EA32420072200447700 /* APIService.m in Sources */,
 				E7D1FE7A241FF43C00B2E994 /* AppDelegate.m in Sources */,
 				E7D1FE8B241FF43E00B2E994 /* main.m in Sources */,
 				E7D1FE7D241FF43C00B2E994 /* SceneDelegate.m in Sources */,
@@ -439,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RL63GUXBB4;
 				INFOPLIST_FILE = "moviedb-objc/Info.plist";
@@ -448,7 +456,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.developer.picolli.moviedb-objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "moviedb-objc/moviedb-objc-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -456,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RL63GUXBB4;
 				INFOPLIST_FILE = "moviedb-objc/Info.plist";
@@ -465,7 +478,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.developer.picolli.moviedb-objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "moviedb-objc/moviedb-objc-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -555,7 +571,7 @@
 				E7D1FEA3241FF43E00B2E994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		E7D1FEA4241FF43E00B2E994 /* Build configuration list for PBXNativeTarget "moviedb-objc" */ = {
 			isa = XCConfigurationList;
@@ -564,7 +580,7 @@
 				E7D1FEA6241FF43E00B2E994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		E7D1FEA7241FF43E00B2E994 /* Build configuration list for PBXNativeTarget "moviedb-objcTests" */ = {
 			isa = XCConfigurationList;
@@ -573,7 +589,7 @@
 				E7D1FEA9241FF43E00B2E994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		E7D1FEAA241FF43E00B2E994 /* Build configuration list for PBXNativeTarget "moviedb-objcUITests" */ = {
 			isa = XCConfigurationList;
@@ -582,7 +598,7 @@
 				E7D1FEAC241FF43E00B2E994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
