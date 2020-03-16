@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MovieCell.h
 //  moviedb-objc
 //
 //  Created by Guilherme Piccoli on 16/03/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+NS_ASSUME_NONNULL_BEGIN
 
+@interface MovieCell : UITableViewCell
 
 @end
 
+NS_ASSUME_NONNULL_END

@@ -16,6 +16,7 @@
 		E7D1FE8B241FF43E00B2E994 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D1FE8A241FF43E00B2E994 /* main.m */; };
 		E7D1FE95241FF43E00B2E994 /* moviedb_objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D1FE94241FF43E00B2E994 /* moviedb_objcTests.m */; };
 		E7D1FEA0241FF43E00B2E994 /* moviedb_objcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D1FE9F241FF43E00B2E994 /* moviedb_objcUITests.m */; };
+		E7D1FEAF2420016000B2E994 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D1FEAE2420016000B2E994 /* MovieCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		E7D1FE9B241FF43E00B2E994 /* moviedb-objcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "moviedb-objcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D1FE9F241FF43E00B2E994 /* moviedb_objcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moviedb_objcUITests.m; sourceTree = "<group>"; };
 		E7D1FEA1241FF43E00B2E994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7D1FEAD2420016000B2E994 /* MovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		E7D1FEAE2420016000B2E994 /* MovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				E7D1FE86241FF43E00B2E994 /* LaunchScreen.storyboard */,
 				E7D1FE89241FF43E00B2E994 /* Info.plist */,
 				E7D1FE8A241FF43E00B2E994 /* main.m */,
+				E7D1FEAD2420016000B2E994 /* MovieCell.h */,
+				E7D1FEAE2420016000B2E994 /* MovieCell.m */,
 			);
 			path = "moviedb-objc";
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D1FE80241FF43C00B2E994 /* ViewController.m in Sources */,
+				E7D1FEAF2420016000B2E994 /* MovieCell.m in Sources */,
 				E7D1FE7A241FF43C00B2E994 /* AppDelegate.m in Sources */,
 				E7D1FE8B241FF43E00B2E994 /* main.m in Sources */,
 				E7D1FE7D241FF43C00B2E994 /* SceneDelegate.m in Sources */,
