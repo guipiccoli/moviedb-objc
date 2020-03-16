@@ -10,6 +10,12 @@
 
 @implementation MovieCell
 
+@synthesize movieImage = _movieImage;
+@synthesize movieTitle = _movieTitle;
+@synthesize movieDescription = _movieDescription;
+@synthesize movieRating = _movieRating;
+
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
