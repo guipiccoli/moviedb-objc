@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MovieDetailViewController.h"
 #import "MovieCell.h"
 
 @interface ViewController ()
@@ -69,6 +70,13 @@ NSArray *moviesDesc;
     else {
         return @"Now playing";
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    MovieDetailViewController *desc = [self.storyboard instantiateViewControllerWithIdentifier:@"DescriptionViewController"];
+    [self.navigationController pushViewController:desc animated:YES];
+    
 }
 
 @end
