@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D270EA32420072200447700 /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D270EA22420072200447700 /* APIService.m */; };
+		6D8024762422C0F000971709 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8024752422C0F000971709 /* Movie.m */; };
 		E7D1FE7A241FF43C00B2E994 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D1FE79241FF43C00B2E994 /* AppDelegate.m */; };
 		E7D1FE7D241FF43C00B2E994 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D1FE7C241FF43C00B2E994 /* SceneDelegate.m */; };
 		E7D1FE80241FF43C00B2E994 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D1FE7F241FF43C00B2E994 /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		6D270EA22420072200447700 /* APIService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIService.m; sourceTree = "<group>"; };
 		6D57FDD9242025BD00183A24 /* APIService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIService.h; sourceTree = "<group>"; };
+		6D8024742422C0F000971709 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		6D8024752422C0F000971709 /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		E7D1FE75241FF43C00B2E994 /* moviedb-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "moviedb-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D1FE78241FF43C00B2E994 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7D1FE79241FF43C00B2E994 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				E7D1FE8A241FF43E00B2E994 /* main.m */,
 				6D270EA22420072200447700 /* APIService.m */,
 				6D57FDD9242025BD00183A24 /* APIService.h */,
+				6D8024742422C0F000971709 /* Movie.h */,
+				6D8024752422C0F000971709 /* Movie.m */,
 			);
 			path = "moviedb-objc";
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D8024762422C0F000971709 /* Movie.m in Sources */,
 				E7D1FE80241FF43C00B2E994 /* ViewController.m in Sources */,
 				6D270EA32420072200447700 /* APIService.m in Sources */,
 				E7D1FE7A241FF43C00B2E994 /* AppDelegate.m in Sources */,

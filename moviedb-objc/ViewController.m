@@ -22,12 +22,12 @@
 //    ˆHandler teste = ˆvoid(NSMutableArray *movies) {
 //
 //    };
-    void(^teste)(NSMutableArray*) = ^void(NSMutableArray *movies) {
+    void(^teste)(NSMutableArray<Movie *>*) = ^void(NSMutableArray<Movie *> *movies) {
         NSLog(@"funcionou");
         return;
     };
     
-    [service getSomeMovies:&teste];
+    [service getSomeMovies:teste];
 }
 
 @end

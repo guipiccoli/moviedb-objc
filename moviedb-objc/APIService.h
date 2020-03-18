@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Movie.h"
 
 @interface APIService : NSObject
 
-typedef void (ˆHandler) (NSMutableArray *movies);
-- (void)getSomeMovies: (void (NSMutableArray*))completionHandler;
+- (void)getSomeMovies:(void (^)(NSMutableArray<Movie *>*))completionHandler;
 
 @end
