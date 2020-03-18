@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@interface APIService : NSObject
 
-@protocol APIService <NSObject>
+typedef void (ˆHandler) (NSMutableArray *movies);
+- (void)getSomeMovies: (void (NSMutableArray*))completionHandler;
 
 @end
-
-NS_ASSUME_NONNULL_END

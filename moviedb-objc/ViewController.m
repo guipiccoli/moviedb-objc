@@ -18,9 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    APIService* service = [[APIService alloc] init];
-//    [service getPopularMovies:<#(id)#> :<#^(NSData *data, NSURLResponse *response, NSError *error)completionHandler#>]
+    APIService* service = APIService.new;
+//    ˆHandler teste = ˆvoid(NSMutableArray *movies) {
+//
+//    };
+    void(^teste)(NSMutableArray*) = ^void(NSMutableArray *movies) {
+        NSLog(@"funcionou");
+        return;
+    };
+    
+    [service getSomeMovies:&teste];
 }
-
 
 @end

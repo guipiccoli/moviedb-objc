@@ -9,13 +9,40 @@
 #import <Foundation/Foundation.h>
 #import "APIService.h"
 
-@interface APIService : NSObject
-
--(void)getPopularMovies: completionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler;
+@interface APIService ()
 
 @end
 
 @implementation APIService
+
+- (void)getSomeMovies: (void (NSMutableArray*))completionHandler {
+    
+    NSString *urlString = @"https://api.themoviedb.org/3/movie/popular?api_key=0d437200fbd8b26a306c3dc5f9bbbaca&language=en-US&page=1";
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+//        NSString *auxString = [[NSString alloc] initWithData:data encoding: NSUTF8StringEncoding];
+//        NSLog(@"%@", auxString);
+        
+        NSError *err;
+        NSArray *parsedData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&err];
+        if (err) {
+            NSLog(@"Failed to serialize into JSON: %@", err);
+            return;
+        }
+        
+        NSMutableArray *array = NSMutableArray.new;
+        for (NSDictionary *PopularMovie in parsedData) {
+            
+        }
+        completionHandler(array);
+                
+        NSLog(@"finished getting movies");
+    }] resume];
+}
+
+
 
 - (void)getPopularMovies: completionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler {
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
