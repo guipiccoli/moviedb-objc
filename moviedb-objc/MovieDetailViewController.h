@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *movieTitle;
 @property (weak, nonatomic) IBOutlet UILabel *movieGenres;
 
+@property (strong, nonatomic) NSString* description;
+@property (strong, nonatomic) NSString* rating;
+@property (strong, nonatomic) NSString* image;
+@property (strong, nonatomic) NSString* titleMovie;
+@property (strong, nonatomic) NSString* genres;
+
 @end
 
 NS_ASSUME_NONNULL_END

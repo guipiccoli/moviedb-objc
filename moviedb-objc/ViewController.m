@@ -113,8 +113,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    MovieDetailViewController *desc = [self.storyboard instantiateViewControllerWithIdentifier:@"DescriptionViewController"];
-    [self.navigationController pushViewController:desc animated:YES];
+    MovieDetailViewController *movieDetail = [self.storyboard instantiateViewControllerWithIdentifier:@"DescriptionViewController"];
+    
+    Movie *movie = Movie.new;
+    if (indexPath.section == 0) {
+        movie = _moviesPopular[indexPath.row];
+    }
+    else if (indexPath.section == 1) {
+        movie = _moviesNowPlaying[indexPath.row];
+    }
+    
+    movieDetail.titleMovie = movie.name;
+    movieDetail.description = movie.descriptiton;
+    movieDetail.image = movie.image;
+    movieDetail.genres = @"Drama, Comedia, Suspense";
+    movieDetail.rating = movie.rating;
+    
+    
+    [self.navigationController pushViewController:movieDetail animated:YES];
 }
 
 @end
