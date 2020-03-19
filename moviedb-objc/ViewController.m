@@ -14,24 +14,37 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+
+@property NSMutableArray<Movie*> *moviesNowPlaying;
+@property NSMutableArray<Movie*> *moviesPopular;
 @end
 
 @implementation ViewController
 
-NSArray *movies;
-NSArray *moviesDesc;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    movies= @[@"Filme 1", @"Filme 2", @"Filme 3"];
-    moviesDesc= @[@"Filme 1 v moisvdmios msoi os siofn inusnf indfnidf indv insf niussonidsnm so smod mods nisnid s", @"Filme 2 moadsimoavmoisd imo moi omisf mofd oiddmoif dfmoi dmio", @"Filme 3 msaodvomsvmois miod moisf mos msim s nsm sm i mis nisdnisidnsn"];
     
-        APIService* service = APIService.new;
+    self.moviesPopular = NSMutableArray.new;
+    self.moviesNowPlaying = NSMutableArray.new;
 
-        
+    APIService *service = APIService.new;
         [service getPopularMovies:^(NSMutableArray<Movie *> *movies) {
-            NSLog(@"funcionou");
-    //        return;
+            self.moviesPopular = movies;
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.tableView reloadData];
+            });
+            return;
+        }];
+        [service getNowPlayingMovies:^(NSMutableArray<Movie *> *movies) {
+            self.moviesNowPlaying = movies;
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                [self.tableView reloadData];
+            });
+            return;
         }];
 }
 
@@ -39,21 +52,38 @@ NSArray *moviesDesc;
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MovieCell *cell = (MovieCell *) [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    NSString *movieTitle = movies[indexPath.row];
-    NSString *movieDesc = moviesDesc[indexPath.row];
-
-    
     if (indexPath.section == 0 ) {
-        cell.movieImage.image = [UIImage imageNamed: @"List"];
-        cell.movieRating.text = @"5";
-        cell.movieDescription.text = movieDesc;
-        cell.movieTitle.text = movieTitle;
+        Movie *moviePopular = self.moviesPopular[indexPath.row];
+        
+        cell.movieTitle.text = moviePopular.name;
+        cell.movieRating.text = [NSString stringWithFormat:@"%@", moviePopular.rating];
+        cell.movieDescription.text = moviePopular.descriptiton;
+        
+        dispatch_async(dispatch_get_global_queue(0,0), ^{
+            NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [NSString stringWithFormat:@"https://image.tmdb.org/t/p/w500/%@", moviePopular.image]]];
+            if ( data == nil )
+                return;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                cell.imageView.image = [UIImage imageWithData: data];
+            });
+        });
     }
-    else {
-        cell.movieImage.image = [UIImage imageNamed: @"List"];
-        cell.movieRating.text = @"0";
-        cell.movieDescription.text = movieDesc;
-        cell.movieTitle.text = movieTitle;
+
+    else if (indexPath.section == 1) {
+        Movie *movieNowPlaying = self.moviesNowPlaying[indexPath.row];
+        
+        cell.movieTitle.text = movieNowPlaying.name;
+        cell.movieRating.text = [NSString stringWithFormat:@"%@", movieNowPlaying.rating];
+        cell.movieDescription.text = movieNowPlaying.descriptiton;
+        
+        dispatch_async(dispatch_get_global_queue(0,0), ^{
+            NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [NSString stringWithFormat:@"https://image.tmdb.org/t/p/w500/%@", movieNowPlaying.image]]];
+            if ( data == nil )
+                return;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                cell.imageView.image = [UIImage imageWithData: data];
+            });
+        });
     }
 
     return cell;
@@ -61,10 +91,10 @@ NSArray *moviesDesc;
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return 3;
+        return _moviesPopular.count;
     }
     else {
-        return 1;
+        return _moviesNowPlaying.count;
     }
 }
 
@@ -85,7 +115,6 @@ NSArray *moviesDesc;
     
     MovieDetailViewController *desc = [self.storyboard instantiateViewControllerWithIdentifier:@"DescriptionViewController"];
     [self.navigationController pushViewController:desc animated:YES];
-    
 }
 
 @end
