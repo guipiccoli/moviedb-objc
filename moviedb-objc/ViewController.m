@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MovieDetailViewController.h"
 #import "MovieCell.h"
+#import "APIService.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -24,6 +25,14 @@ NSArray *moviesDesc;
     [super viewDidLoad];
     movies= @[@"Filme 1", @"Filme 2", @"Filme 3"];
     moviesDesc= @[@"Filme 1 v moisvdmios msoi os siofn inusnf indfnidf indv insf niussonidsnm so smod mods nisnid s", @"Filme 2 moadsimoavmoisd imo moi omisf mofd oiddmoif dfmoi dmio", @"Filme 3 msaodvomsvmois miod moisf mos msim s nsm sm i mis nisdnisidnsn"];
+    
+        APIService* service = APIService.new;
+
+        
+        [service getPopularMovies:^(NSMutableArray<Movie *> *movies) {
+            NSLog(@"funcionou");
+    //        return;
+        }];
 }
 
 
