@@ -11,6 +11,6 @@
 
 @interface APIService : NSObject
 
-- (void)getSomeMovies:(void (^)(NSMutableArray<Movie *>*))completionHandler;
+- (void)getPopularMovies:(void (^)(NSMutableArray<Movie *>*))completionHandler;
 
 @end

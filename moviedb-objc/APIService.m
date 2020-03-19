@@ -45,7 +45,7 @@
         }
         
         if (completionHandler) {
-            completionHandler(array); // TA BUGADO
+            completionHandler(array);
         }
         NSLog(@"finished getting movies");
     }] resume];
