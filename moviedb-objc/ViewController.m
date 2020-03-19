@@ -22,15 +22,19 @@
 //        NSLog(@"funcionou");
 //        return;
 //    };
+    NSArray *array = @[@12, @16, @28];
+    [service getMoviesGenres:^(NSString *genres) {
+        NSLog(genres);
+    } movieIDs: array];
     
-    [service getPopularMovies:^(NSMutableArray<Movie *> *movies) {
+//    [service getPopularMovies:^(NSMutableArray<Movie *> *movies) {
 //        NSLog(movies[0].name);
-        return;
-    }];
-    [service getNowPlayingMovies:^(NSMutableArray<Movie *> *movies) {
+//        return;
+//    }];
+//    [service getNowPlayingMovies:^(NSMutableArray<Movie *> *movies) {
 //        NSLog(movies[0].name);
-        return;
-    }];
+//        return;
+//    }];
 }
 
 @end
