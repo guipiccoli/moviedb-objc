@@ -24,8 +24,12 @@
 //    };
     
     [service getPopularMovies:^(NSMutableArray<Movie *> *movies) {
-        NSLog(@"funcionou");
-//        return;
+//        NSLog(movies[0].name);
+        return;
+    }];
+    [service getNowPlayingMovies:^(NSMutableArray<Movie *> *movies) {
+//        NSLog(movies[0].name);
+        return;
     }];
 }
 

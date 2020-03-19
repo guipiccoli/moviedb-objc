@@ -12,5 +12,6 @@
 @interface APIService : NSObject
 
 - (void)getPopularMovies:(void (^)(NSMutableArray<Movie *>*))completionHandler;
+- (void)getNowPlayingMovies:(void (^)(NSMutableArray<Movie *>*))completionHandler;
 
 @end
