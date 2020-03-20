@@ -24,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.prefersLargeTitles = YES;
+    
     self.moviesPopular = NSMutableArray.new;
     self.moviesNowPlaying = NSMutableArray.new;
 
