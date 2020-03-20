@@ -43,7 +43,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="29" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2T6-XE-QDO">
-                                                    <rect key="frame" x="99" y="11" width="315" height="114.5"/>
+                                                    <rect key="frame" x="110" y="11" width="294" height="114.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Film title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzg-cS-Wgc">
                                                             <rect key="frame" x="0.0" y="0.0" width="65" height="19"/>
@@ -53,7 +53,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBc-YH-It2">
-                                                            <rect key="frame" x="0.0" y="30" width="304.5" height="55.5"/>
+                                                            <rect key="frame" x="0.0" y="30" width="294" height="55.5"/>
                                                             <string key="text">Film description amno ao oam amodi aoid m iosm sdio ms io msf o mdf dmfi mdf idu idf md ao aoi adsoim d iomd moida daoim aoi ma iods omid mo </string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
@@ -79,21 +79,21 @@
                                                     </constraints>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DVr-bv-I9k">
-                                                    <rect key="frame" x="10" y="5" width="79" height="121"/>
+                                                    <rect key="frame" x="10" y="10" width="80" height="111"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="121" id="hGx-D2-1pM"/>
-                                                        <constraint firstAttribute="width" constant="79" id="rc2-L7-8yd"/>
+                                                        <constraint firstAttribute="height" constant="110" id="Ktp-NK-qDI"/>
+                                                        <constraint firstAttribute="width" constant="80" id="rG4-nj-x9U"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="DVr-bv-I9k" firstAttribute="top" secondItem="HpV-Rn-I3m" secondAttribute="top" constant="5" id="OL4-hV-BIk"/>
+                                                <constraint firstItem="DVr-bv-I9k" firstAttribute="top" secondItem="HpV-Rn-I3m" secondAttribute="top" constant="10" id="OL4-hV-BIk"/>
                                                 <constraint firstAttribute="bottom" secondItem="2T6-XE-QDO" secondAttribute="bottom" constant="5.5" id="P4P-z8-7K2"/>
-                                                <constraint firstItem="2T6-XE-QDO" firstAttribute="leading" secondItem="HpV-Rn-I3m" secondAttribute="leading" constant="99" id="QDz-cV-tvs"/>
+                                                <constraint firstItem="2T6-XE-QDO" firstAttribute="leading" secondItem="DVr-bv-I9k" secondAttribute="trailing" constant="20" id="W4L-gl-Oyk"/>
                                                 <constraint firstItem="DVr-bv-I9k" firstAttribute="leading" secondItem="HpV-Rn-I3m" secondAttribute="leading" constant="10" id="XKK-Gy-2qZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="2T6-XE-QDO" secondAttribute="trailing" id="dob-df-xmv"/>
+                                                <constraint firstAttribute="trailing" secondItem="2T6-XE-QDO" secondAttribute="trailing" constant="10" id="dob-df-xmv"/>
                                                 <constraint firstItem="2T6-XE-QDO" firstAttribute="top" secondItem="HpV-Rn-I3m" secondAttribute="top" constant="11" id="nPD-Mp-lcy"/>
-                                                <constraint firstAttribute="bottom" secondItem="DVr-bv-I9k" secondAttribute="bottom" constant="5" id="szk-Ud-cC3"/>
+                                                <constraint firstAttribute="bottom" secondItem="DVr-bv-I9k" secondAttribute="bottom" constant="10" id="szk-Ud-cC3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -145,13 +145,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkq-EY-xl6">
-                                                <rect key="frame" x="38" y="245.5" width="118" height="19.5"/>
+                                                <rect key="frame" x="38" y="236" width="118" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIb-BR-LQa">
-                                                <rect key="frame" x="28" y="265.5" width="358" height="304.5"/>
+                                                <rect key="frame" x="28" y="270.5" width="358" height="304.5"/>
                                                 <string key="text">TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste coEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola  TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola TEste com histoira ola </string>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -203,13 +203,13 @@
                                             <constraint firstItem="Prj-xD-fG4" firstAttribute="leading" secondItem="cVg-Fq-ZHH" secondAttribute="trailing" constant="10" id="5o9-f9-FhV"/>
                                             <constraint firstItem="Prj-xD-fG4" firstAttribute="top" secondItem="fN3-QC-Pv1" secondAttribute="topMargin" constant="55" id="75e-vt-HGu"/>
                                             <constraint firstItem="S3e-RV-HF7" firstAttribute="leading" secondItem="cVg-Fq-ZHH" secondAttribute="trailing" constant="22" id="KJB-VP-9kG"/>
+                                            <constraint firstItem="Xkq-EY-xl6" firstAttribute="top" secondItem="cVg-Fq-ZHH" secondAttribute="bottom" constant="12" id="MTE-rH-ffW"/>
                                             <constraint firstItem="S3e-RV-HF7" firstAttribute="top" secondItem="DWS-FH-fk3" secondAttribute="bottom" constant="30" id="OdO-gT-IdU"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="mIb-BR-LQa" secondAttribute="trailing" constant="20" id="USc-ZU-F7w"/>
                                             <constraint firstItem="cVg-Fq-ZHH" firstAttribute="top" secondItem="fN3-QC-Pv1" secondAttribute="top" constant="50" id="ZfQ-rR-MgY"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="Prj-xD-fG4" secondAttribute="trailing" constant="15" id="eR9-Yu-wn3"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="Xkq-EY-xl6" secondAttribute="trailing" constant="250" id="jaa-l7-yJX"/>
-                                            <constraint firstItem="Xkq-EY-xl6" firstAttribute="top" secondItem="S3e-RV-HF7" secondAttribute="bottom" constant="55" id="kUN-qH-SfF"/>
-                                            <constraint firstItem="mIb-BR-LQa" firstAttribute="top" secondItem="Xkq-EY-xl6" secondAttribute="bottom" constant="0.5" id="kbT-Ng-YXo"/>
+                                            <constraint firstItem="mIb-BR-LQa" firstAttribute="top" secondItem="Xkq-EY-xl6" secondAttribute="bottom" constant="15" id="kbT-Ng-YXo"/>
                                             <constraint firstItem="Xkq-EY-xl6" firstAttribute="leading" secondItem="fN3-QC-Pv1" secondAttribute="leadingMargin" constant="30" id="nHg-Ho-WjS"/>
                                             <constraint firstAttribute="trailing" secondItem="S3e-RV-HF7" secondAttribute="trailing" constant="196.5" id="pBJ-FP-Ygm"/>
                                             <constraint firstItem="mIb-BR-LQa" firstAttribute="leading" secondItem="fN3-QC-Pv1" secondAttribute="leadingMargin" constant="20" id="zd1-UE-EhD"/>
