@@ -126,7 +126,7 @@
     movieDetail.titleMovie = movie.name;
     movieDetail.description = movie.descriptiton;
     movieDetail.image = movie.image;
-    movieDetail.genres = @"Drama, Comedia, Suspense";
+    movieDetail.genres = movie.genres;
     movieDetail.rating = movie.rating;
     
     

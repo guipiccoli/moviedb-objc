@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString* rating;
 @property (strong, nonatomic) NSString* image;
 @property (strong, nonatomic) NSString* titleMovie;
-@property (strong, nonatomic) NSString* genres;
+@property (strong, nonatomic) NSArray* genres;
 
 @end
 
