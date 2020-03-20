@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *descriptiton;
 @property (strong, nonatomic) NSString *rating;
-@property (strong, nonatomic) NSString *genres;
+@property (strong, nonatomic) NSMutableArray<NSNumber *> *genres;
 @property (strong, nonatomic) NSString *image;
 @property (strong, nonatomic) NSString *overview;
 

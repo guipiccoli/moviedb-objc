@@ -37,7 +37,7 @@
             movieAux.descriptiton = popularMovie[@"overview"];
             movieAux.rating = popularMovie[@"vote_average"];
             movieAux.image = popularMovie[@"poster_path"];
-            movieAux.genres = @"";
+            movieAux.genres = popularMovie[@"genre_ids"];
             [array addObject:movieAux];
         }
         
@@ -69,7 +69,7 @@
             movieAux.descriptiton = popularMovie[@"overview"];
             movieAux.rating = popularMovie[@"vote_average"];
             movieAux.image = popularMovie[@"poster_path"];
-            movieAux.genres = @"";
+            movieAux.genres = popularMovie[@"genre_ids"];;
             [array addObject:movieAux];
         }
         
@@ -93,19 +93,23 @@
             return;
         }
         
-        NSString *genres = NSString.new;
+        NSMutableString *genres = NSMutableString.new;
         for (NSDictionary *genreID in parsedData[@"genres"]){
-            for
+            for (NSNumber *movieGenreID in movieIds) {
+                NSString *string1 = [movieGenreID stringValue];
+                NSString *string2 = [genreID[@"id"] stringValue];
+                if (string1 == string2) {
+                    [genres appendString:(genreID[@"name"])];
+                    [genres appendString:(@", ")];
+                }
+            }
         }
         
-        
-        
         if (completionHandler) {
-            completionHandler(@"some Genres");
+            completionHandler(genres);
         }
         NSLog(@"finished getting movies");
     }] resume];
-    
 }
 
 @end
