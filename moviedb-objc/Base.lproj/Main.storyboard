@@ -237,7 +237,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="knZ-xO-Liz"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Movie Details" id="fGk-Be-lub"/>
+                    <navigationItem key="navigationItem" title="Movie Details" largeTitleDisplayMode="never" id="fGk-Be-lub"/>
                     <connections>
                         <outlet property="movieDescription" destination="mIb-BR-LQa" id="lRF-dX-mnm"/>
                         <outlet property="movieGenres" destination="DWS-FH-fk3" id="jzi-Lc-GjM"/>
